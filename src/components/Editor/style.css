@@ -1,0 +1,39 @@
+
+
+.spintax-editor-container {
+  background-color: #6c757d;
+  padding: 20px;
+  height: fit-content;
+}
+.editor {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  padding: 10px;
+  background-color: #444;
+  color: white;
+  font-size: 14px;
+  font-family: monospace;
+}
+.editor-statement {
+  color: orange;
+}
+.editor-option {
+  color: #ff9999;
+}
+.editor-tax {
+  color: #88c999;
+}
+.editor-error {
+  color: #842c2c;
+}
+
+.error-message {
+  position: absolute;
+  color: #ff5c5a;
+  border-radius: .25rem;
+  background-color: #4d4d56;
+  padding: 7px;
+  margin-top: 10px;
+}
+  

@@ -1,23 +1,23 @@
-import React, { Component, useState } from "react";
-import { copyToClipboard } from "../tools/copyToClipboard";
-import { generateRandom } from "../tools/spintax";
+import React, { useState } from "react";
+import "./style.css";
+import { copyToClipboard, spintax } from "../../tools";
 
 function Generator(props) {
   const [selectedSpintax, setSelectedSpintax] = useState(
     props.savedSpintax[0] || []
   );
   const [generated, setGenerated] = useState(
-    generateRandom(
+    spintax.generateRandom(
       props.savedSpintax.length > 0 ? props.savedSpintax[0].text : ""
     )
   );
   return (
     <div className="row">
-      <div className="col-sm-12 col-md-3 spintax-info-container">
+      <div className="col-sm-12 col-md-3 generator-spintax-list">
         {props.savedSpintax.map((item) => (
           <div
-            className={`row list-item-container ${
-              item.name === selectedSpintax.name ? "active" : ""
+            className={`row ${
+              item.name === selectedSpintax.name ? "active" : "item"
             }`}
             onClick={() => setSelectedSpintax(item)}
           >
@@ -36,7 +36,7 @@ function Generator(props) {
               type="button"
               class="btn btn-primary btn-custom"
               value="Generate Random Text"
-              onClick={() => setGenerated(generateRandom(selectedSpintax.text))}
+              onClick={() => setGenerated(spintax.generateRandom(selectedSpintax.text))}
             />
           </div>
         </div>

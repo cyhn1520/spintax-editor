@@ -1,15 +1,16 @@
-import React, { Component } from "react";
+import React from "react";
+import "./style.css";
 
 function SpintaxList({ data, deleteSpintax }) {
   return (
-    <React.Fragment>
+    <div className="col-12 spintax-list-container">
       {data.map((item) => (
-        <div className="row list-item-container ">
+        <div className="row list-item-container">
           <div className="col-2 list-item-name">{item.name}</div>
           <div className="col-10">
             {item.text}
             <div
-              className="btn btn-danger btn-delete"
+              className=" btn-delete"
               onClick={() => deleteSpintax(item.name)}
             >
               x
@@ -17,7 +18,7 @@ function SpintaxList({ data, deleteSpintax }) {
           </div>
         </div>
       ))}
-    </React.Fragment>
+    </div>
   );
 }
 

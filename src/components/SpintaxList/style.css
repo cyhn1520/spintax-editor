@@ -1,0 +1,33 @@
+.spintax-list-container {
+  min-height: 100px;
+  background-color: #444;
+}
+.list-item-container {
+  background-color: #6c757d;
+  margin: 10px;
+  place-content: center;
+  cursor: pointer;
+}
+
+.list-item-container.active {
+  background-color: #566786;
+}
+
+.list-item-name {
+  padding: 10px;
+  background-color: #5c656d;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.btn-delete {
+  position: absolute;
+  text-align: center;
+  width: 40px;
+  right: 0;
+  top: 0;
+  padding-top: 10px;
+  height: 100%;
+  background-color: #dc3545;
+}

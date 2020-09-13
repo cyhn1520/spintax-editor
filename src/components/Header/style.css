@@ -1,0 +1,14 @@
+.navbar-dark .navbar-nav .nav-link.active {
+  color: #ff6060;
+  background-color: #4d4d56;
+  border: 0px;
+}
+.navbar-dark .navbar-nav .nav-link.active:hover {
+  border: 0px;
+}
+.nav-tabs .nav-link {
+  border: 0px;
+}
+.nav.nav-tabs {
+  border: 0px;
+}
